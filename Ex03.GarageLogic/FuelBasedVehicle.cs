@@ -15,6 +15,7 @@ namespace Ex03.GarageLogic
         internal FuelBasedVehicle(string i_ModeName, string i_LicenseNumber, float i_CurrentAmountOfFuel) : base(i_ModeName, i_LicenseNumber)
         {
             m_CurrentAmountOfFuel = i_CurrentAmountOfFuel;
+            m_RemainingEnergyPercentage = m_CurrentAmountOfFuel / m_MaxAmountOfFuel * 100;
         }
 
         internal float CurrentAmountOfFuel
@@ -28,6 +29,7 @@ namespace Ex03.GarageLogic
             set
             {
                 m_CurrentAmountOfFuel = value;
+                m_RemainingEnergyPercentage = m_CurrentAmountOfFuel / m_MaxAmountOfFuel * 100;
             }
         }
 
@@ -38,8 +40,11 @@ namespace Ex03.GarageLogic
                 if ((m_CurrentAmountOfFuel + i_FuelToAdd) < m_MaxAmountOfFuel)
                 {
                     m_CurrentAmountOfFuel += i_FuelToAdd;
+                    m_RemainingEnergyPercentage = m_CurrentAmountOfFuel / m_MaxAmountOfFuel * 100;
                 }
             }
+
+            //add elses with exceptions!!!!
         }
     }
 }
