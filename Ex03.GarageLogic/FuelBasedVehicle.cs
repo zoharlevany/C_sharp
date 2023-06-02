@@ -18,18 +18,26 @@ namespace Ex03.GarageLogic
             m_RemainingEnergyPercentage = m_CurrentAmountOfFuel / m_MaxAmountOfFuel * 100;
         }
 
-        internal float CurrentAmountOfFuel
+        //internal float CurrentAmountOfFuel
+        //{
+        //    get 
+        //    { 
+        //        return m_CurrentAmountOfFuel; 
+        //    }
+
+
+        //    set
+        //    {
+        //        m_CurrentAmountOfFuel = value;
+        //        m_RemainingEnergyPercentage = m_CurrentAmountOfFuel / m_MaxAmountOfFuel * 100;
+        //    }
+        //}
+
+        internal eFuelType FuelType
         {
             get 
             { 
-                return m_CurrentAmountOfFuel; 
-            }
-
-
-            set
-            {
-                m_CurrentAmountOfFuel = value;
-                m_RemainingEnergyPercentage = m_CurrentAmountOfFuel / m_MaxAmountOfFuel * 100;
+                return r_FuelType; 
             }
         }
 

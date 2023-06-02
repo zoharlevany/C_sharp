@@ -16,5 +16,21 @@ namespace Ex03.GarageLogic
             r_LicenseType = i_LicenseType;
             r_EngineVolume = i_Volume;
         }
+
+        internal eLicenseType LicenseType
+        {
+            get 
+            { 
+                return r_LicenseType; 
+            }
+        }
+
+        internal int EngineVolume
+        {
+            get 
+            { 
+                return r_EngineVolume; 
+            }
+        }
     }
 }

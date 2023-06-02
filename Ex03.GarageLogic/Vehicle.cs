@@ -35,6 +35,22 @@ namespace Ex03.GarageLogic
                 return r_LicenseNumber;
             }
         }
-        
+
+        internal List<Wheel> Wheels
+        {
+            get
+            {
+                return m_Wheels;
+            }
+        }
+
+        internal float RemainingEnergyPercentage
+        {
+            get
+            {
+                return m_RemainingEnergyPercentage;
+            }
+        }
+
     }
 }

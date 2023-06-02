@@ -17,19 +17,19 @@ namespace Ex03.GarageLogic
             m_RemainingEnergyPercentage = m_RemainingTimeOfEngineOperation / m_MaxTimeOfEngineOperation * 100;
         }
 
-        internal float RemainingTime
-        {
-            get 
-            { 
-                return m_RemainingTimeOfEngineOperation; 
-            }
+        //internal float RemainingTime
+        //{
+        //    get 
+        //    { 
+        //        return m_RemainingTimeOfEngineOperation; 
+        //    }
 
-            set
-            {
-                m_RemainingTimeOfEngineOperation = value;
-                m_RemainingEnergyPercentage = m_RemainingTimeOfEngineOperation / m_MaxTimeOfEngineOperation * 100;
-            }
-        }
+        //    set
+        //    {
+        //        m_RemainingTimeOfEngineOperation = value;
+        //        m_RemainingEnergyPercentage = m_RemainingTimeOfEngineOperation / m_MaxTimeOfEngineOperation * 100;
+        //    }
+        //}
 
         internal void Recharge(float i_HoursToAdd)
         {
