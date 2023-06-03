@@ -8,12 +8,12 @@ namespace Ex03.GarageLogic
 {
     internal struct Truck
     {
-        private bool m_DoesItContainDengerousMaterials;
+        private readonly bool r_DoesItContainDengerousMaterials;
         private readonly float r_CargoTankVolume;
 
         internal Truck(bool i_DoesItContainDengerousMaterials, float i_Volume)
         {
-            m_DoesItContainDengerousMaterials = i_DoesItContainDengerousMaterials;
+            r_DoesItContainDengerousMaterials = i_DoesItContainDengerousMaterials;
             r_CargoTankVolume = i_Volume;
         }
 
@@ -21,12 +21,15 @@ namespace Ex03.GarageLogic
         {
             get 
             { 
-                return m_DoesItContainDengerousMaterials; 
+                return r_DoesItContainDengerousMaterials; 
             }
+        }
 
-            set
+        internal float CargoTankVolume
+        {
+            get 
             {
-                m_DoesItContainDengerousMaterials = value;
+                return r_CargoTankVolume; 
             }
         }
     }

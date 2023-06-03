@@ -8,9 +8,9 @@ namespace Ex03.GarageLogic
 {
     internal abstract class FuelBasedVehicle : Vehicle
     {
-        protected readonly eFuelType r_FuelType;
+        protected eFuelType m_FuelType;
         private float m_CurrentAmountOfFuel;
-        protected readonly float m_MaxAmountOfFuel;
+        protected float m_MaxAmountOfFuel;
 
         internal FuelBasedVehicle(string i_ModeName, string i_LicenseNumber, float i_CurrentAmountOfFuel) : base(i_ModeName, i_LicenseNumber)
         {
@@ -37,13 +37,13 @@ namespace Ex03.GarageLogic
         {
             get 
             { 
-                return r_FuelType; 
+                return m_FuelType; 
             }
         }
 
         internal void Refueling(float i_FuelToAdd, eFuelType i_FuelType)
         {
-            if (i_FuelType == r_FuelType)
+            if (i_FuelType == m_FuelType)
             {
                 if ((m_CurrentAmountOfFuel + i_FuelToAdd) < m_MaxAmountOfFuel)
                 {
